@@ -1,0 +1,26 @@
+file;in-0x00e;NPC Update;Packet contains info about another PC (i.e. coordinates).
+
+uint32:@actors;$04;NPC
+uint16;$08;Index
+bitflaglist2:npcupdatemask;0x0A:0-8;Update Mask
+dir;$0B;Direction
+pos;$0C;Position
+uint32;$18;Walk Count;Steadily increases until rotation changes. Does not reset while the mob isn't walking. Only goes until 0xFF1F.
+uint32;$1A;_unknown1
+byte;$1E;HP %
+byte;$1F;Status
+uint32;$20;_unknown2
+uint32;$24;_unknown3
+uint32;$28;_unknown4;In Dynamis - Divergence statue's eye colors
+uint32;$2C;Claimer
+uint16;$30;_unknown5
+uint16;$32;Model ID
+string;$34;Name
+
+enablecode;0
+switchblock;0x0A:3;savename;1
+[[savename]]
+rem;Only save name if the bitflag for it is set
+save;@actors;NPC;Name
+[[]]
+enablecode;1
