@@ -37,9 +37,14 @@ uint16;$60;Boundary
 uint16;$62;Menu Zone;Only set if the menu ID is sent, used as the zone for menu responses (0x5b, 0x5c)
 uint16;$64;Menu ID / CS-id
 uint16;$66;_unknown5
-uint16:weather;$68;Weather
-uint32;$6A;Weather Change Time
-data22;$6E;_unknown7;
+rem;Weather info updated by Setzor
+uint16:weather;$68;Current Weather
+uint16:weather;$6A;Previous Weather
+uint32;$6C;Weather Change Time;
+uint32;$70;Previous Weather Time;
+uint16;$74;Weather Transition;
+uint16;$76;Prev Weather Transition;
+data12;$6E;_unknown7;
 string;$84;Player Name;
 data12;$94;_unknown8
 uint32;$A0;Abyssea Timestamp?
