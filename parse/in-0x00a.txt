@@ -12,10 +12,11 @@ byte;$1C;Movement Speed;Speed 0x32 represents 100%
 byte;$1D;Animation Speed;Speed 0x32 represents 100%
 byte;$1E;HP %
 byte;$1F;Status
-uint32;$20;_unknown1;
+uint32;$20;_unknown_@0x20;
 uint32;0x24;Affects Zone "direction"
 uint16;0x28;Always 0x0100
 uint16;0x2A;Zone animation
+uint32;0x2C;_unknown_@0x2C
 uint16:zones;$30;Zone
 data6;$32;_unknown2;
 ms;$38;Timestamp 1
