@@ -1,0 +1,7 @@
+file;out-0x0E0;Search Comment;Sets your search comment
+rem;Info provided by Setzor
+
+string;0x04;Comment
+uint32;0x84;ffxiusr.sys?;Loaded from first 4 bytes of ffxi/SYS/ffxiusr.sys binary file
+data3;0x88;WIN
+byte;0x94;Search Category
